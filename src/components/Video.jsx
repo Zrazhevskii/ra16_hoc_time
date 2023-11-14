@@ -1,6 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { DateTime } from './DateTime';
+import { WithCorectData } from './WithCorectData';
 
+export const DateTimeCorect = WithCorectData(DateTime);
 
 export const Video = (props) => {
     return (
@@ -11,7 +13,12 @@ export const Video = (props) => {
                 allow='autoplay; encrypted-media'
                 allowFullScreen
             ></iframe>
-            <DateTime date={props.date} />
+            <DateTimeCorect date={props.date} />
         </div>
     );
+};
+
+Video.propTypes = {
+    url: PropTypes.string.isRequired,
+    date: PropTypes.object.isRequired,
 };

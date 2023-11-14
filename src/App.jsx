@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
+// import { useState } from 'react';
 import { VideoList } from './components/VideoList';
 import { data } from './data/data';
 
 export default function App() {
-    const [list, setList] = useState(data);
+    // const [list, setList] = useState(data);
 
-    return (
-        <VideoList list={list} />
-    );
+    return <VideoList list={data} />;
 }
