@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { DateTime } from './DateTime';
 import { WithCorectData } from './WithCorectData';
 
-export const DateTimeCorect = WithCorectData(DateTime);
+export const DateTimePretty = WithCorectData(DateTime);
 
 export const Video = (props) => {
     return (
@@ -13,7 +13,7 @@ export const Video = (props) => {
                 allow='autoplay; encrypted-media'
                 allowFullScreen
             ></iframe>
-            <DateTimeCorect date={props.date} />
+            <DateTimePretty date={props.date} />
         </div>
     );
 };
